@@ -1,15 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import VerbBoard from "./verbBoard"
 
-class App extends React.Component {
+class VerbBoard extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
     return (
-      <VerbBoard/>
-    )
+      <h1>VERB BOARD</h1>
+    );
   }
 }
-export default App;
+export default VerbBoard;
