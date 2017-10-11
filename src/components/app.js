@@ -7,10 +7,14 @@ import "../css/main.scss"
 class App extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      Data: props.Data,
+      Settings : props.Settings
+    };
   }
   render() {
     return (
-      <VerbBoard/>
+      <VerbBoard Data={ this.state.Data } Settings={ this.state.Settings }/>
     )
   }
 }
