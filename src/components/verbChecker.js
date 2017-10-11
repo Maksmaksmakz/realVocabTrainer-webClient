@@ -8,7 +8,6 @@ class VerbChecker extends React.Component {
     this.state = {
       submission: ''
     }
-    console.log(this.props.verb)
   }
   render() {
     return (
@@ -31,6 +30,7 @@ class VerbChecker extends React.Component {
     else{
       this.props.onFalse()
     }
+    this.setState({ submission: '' })
   }
   handleChange(e) {
     e.preventDefault()

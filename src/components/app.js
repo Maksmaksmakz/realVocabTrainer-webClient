@@ -18,12 +18,18 @@ class App extends React.Component {
     return (
       <VerbBoard Data={ this.state.Data }
       Settings={ this.state.Settings }
-      onSubmission= {this.onSubmission.bind(this)}
+      onCorrect= {this.onCorrect.bind(this)}
+      onFalse= {this.onFalse.bind(this)}
       counter = {this.state.counter}/>
     )
   }
-  onSubmission(){
+  onCorrect(){
     this.setState({ CorrectVerbChosen:true })
+    console.log("correct from app")
+    this.state.counter++
+  }
+  onFalse(){
+    console.log("false from app")
     this.state.counter++
   }
 }
