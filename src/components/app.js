@@ -9,13 +9,22 @@ class App extends React.Component {
     super(props)
     this.state = {
       Data: props.Data,
-      Settings : props.Settings
+      Settings : props.Settings,
+      CorrectVerbChosen: false,
+      counter: 0
     };
   }
   render() {
     return (
-      <VerbBoard Data={ this.state.Data } Settings={ this.state.Settings }/>
+      <VerbBoard Data={ this.state.Data }
+      Settings={ this.state.Settings }
+      onSubmission= {this.onSubmission.bind(this)}
+      counter = {this.state.counter}/>
     )
+  }
+  onSubmission(){
+    this.setState({ CorrectVerbChosen:true })
+    this.state.counter++
   }
 }
 export default App;
