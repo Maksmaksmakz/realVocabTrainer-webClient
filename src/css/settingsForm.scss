@@ -1,0 +1,28 @@
+input[type="radio"], input[type="checkbox"] {
+  width:30px;
+  height:30px;
+}
+input[type=checkbox] + label {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 2em;
+    line-height: 1em;
+    vertical-align: text-bottom;
+}
+.settingsForm {
+  width: 100%;
+  max-width: 444px;
+  margin: 0 auto;
+}
+.settingsFormContainer{
+  size: 444px;
+}
+.chkbox {
+   padding-left: 10px;
+   font-weight: bold;
+   width: 40px;
+ }
+ .box {
+   padding-top:15px;
+   margin-left: -20%;
+ }

@@ -1,0 +1,69 @@
+.verbChecker {
+  width: 100%;
+  margin: 0 auto;
+}
+.verbForm{
+  display:inline-block;
+  width: 100%;
+  max-width: 444px;
+  margin: 0 auto ;
+  text-align:center;
+  font-size: 40px;
+}
+.inputButton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.poopIcon {
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  z-index: 1000;
+}
+.validationIconGood{
+  width: 150px;
+  display:block;
+  position:absolute;
+  left:200px;
+  right:0;
+  bottom:150px;
+  margin:auto;
+  z-index: 1000;
+}
+.validationIconBad {
+  width:150px;
+  display:block;
+  position:absolute;
+  left:0;
+  right:200px;
+  bottom:150px;
+  margin:auto;
+  z-index: 1000;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

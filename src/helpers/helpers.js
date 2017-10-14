@@ -8,9 +8,6 @@ export function randomProperty (obj) {
 export function randomAccessor(accessors) {
   let accessor = accessors[Math.floor(Math.random()* accessors.length)]
 
-  console.log("Accessor: ", accessor , "Accessor == vosotros: ", accessor == "vosotros",
-  "Settings[vosotros activated]", Settings["vosotros activated"])
-
   while(accessor == "vosotros" && !Settings["vosotros activated"]) {
     console.log("in while loop")
     accessor = accessors[Math.floor(Math.random()* accessors.length)]

@@ -30,6 +30,11 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
+    "mo-js": "^0.288.2",
+    "mysql": "^2.15.0",
+    "pg": "^7.3.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-css-transition": "^0.7.4",
     "react-fontawesome": "^1.6.1"
   }
 }

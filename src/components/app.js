@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom'
 import VerbBoard from "./verbBoard"
 
 import "../css/main.scss"
+import "../css/bootstrap.css"
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       Data: props.Data,
+      Database: props.Database,
       Settings : props.Settings,
       CorrectVerbChosen: false,
       counter: 0
-    };
+    }
   }
   render() {
     return (
