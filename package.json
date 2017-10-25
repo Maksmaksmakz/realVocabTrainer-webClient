@@ -7,7 +7,7 @@
     "build": "webpack",
     "build:prod": "webpack -p",
     "watch": "webpack-dev-server",
-    "start": "NODE_ENV=production node ./dist/index.js"
+    "start": "NODE_ENV=production node ./dist/bundle.js"
   },
   "author": "Maks",
   "license": "ISC",
