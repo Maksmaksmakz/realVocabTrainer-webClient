@@ -5,7 +5,6 @@ import FontAwesome from 'react-fontawesome'
 import VerbChecker from "./verbChecker"
 import SettingsForm from "./settingsForm"
 
-import "../css/verbBoard.scss"
 import { randomProperty, randomAccessor } from "../helpers/helpers"
 import { getRandomEntry, getRandomAccessor, mapAccessorToPerson } from "../helpers/databaseHelpers"
 

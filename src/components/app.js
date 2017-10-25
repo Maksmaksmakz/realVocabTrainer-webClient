@@ -2,9 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import VerbBoard from "./verbBoard"
 
-import "../css/main.scss"
-import "../css/bootstrap.css"
-
 class App extends React.Component {
   constructor(props) {
     super(props)

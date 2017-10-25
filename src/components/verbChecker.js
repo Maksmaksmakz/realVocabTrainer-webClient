@@ -4,7 +4,6 @@ import FontAwesome from 'react-fontawesome'
 import TransitionGroup from 'react-addons-css-transition-group'
 import mojs from "mo-js"
 
-import "../css/verbChecker.scss"
 import poopIcon from "../img/poop_icon.png"
 import goodIcon from "../img/good.png"
 import badIcon from "../img/bad.png"
