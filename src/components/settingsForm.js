@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import "../css/settingsForm.scss"
 import Settings from "../data/settings"
 
 class SettingsForm extends React.Component {
