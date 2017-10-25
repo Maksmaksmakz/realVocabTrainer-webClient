@@ -1,17 +1,17 @@
 const Settings = {
   "vosotros activated": false,
-  "Subjuntivo": true,
-  "Imperativo": true,
+  "Subjuntivo": false,
+  "Imperativo": false,
   "Presente":true,
-  "Futuro":true,
+  "Futuro":false,
   "Imperfecto":true,
   "Pretérito":true,
-  "Pretérito anterior":true,
-  "Condicional":true,
-  "Condicional perfecto":true,
-  "Presente perfecto":true,
-  "Futuro perfecto":true,
-  "Pluscuamperfecto":true,
+  "Pretérito anterior":false,
+  "Condicional":false,
+  "Condicional perfecto":false,
+  "Presente perfecto":false,
+  "Futuro perfecto":false,
+  "Pluscuamperfecto":false,
 }
 
 export default Settings;

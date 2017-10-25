@@ -18,9 +18,6 @@ function VerbBoard (props){
   const form = entry.tense
   const personAccessor = getRandomAccessor()
 
-  console.log(entry)
-  console.log(mapAccessorToPerson(personAccessor))
-
   return (
     <div>
       <div className="verbInfo">

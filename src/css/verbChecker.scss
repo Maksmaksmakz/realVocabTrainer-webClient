@@ -1,3 +1,5 @@
+$goodIconPosition: 200px ;
+
 .verbChecker {
   width: 100%;
   margin: 0 auto;
@@ -50,20 +52,42 @@
   z-index: 1000;
 }
 
-.example-enter {
+.poopIcon-enter {
   opacity: 0.01;
+  width: 20px;
 }
 
-.example-enter.example-enter-active {
+.poopIcon-enter.poopIcon-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  width: 150px;
+  transition: opacity 150ms ease-in, width 200ms ease-in;
 }
 
-.example-leave {
+.poopIcon-leave {
   opacity: 1;
 }
 
-.example-leave.example-leave-active {
+.poopIcon-leave.poopIcon-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.labelAnimation-enter {
+  opacity: 0.01;
+  width: 20px;
+}
+
+.labelAnimation-enter.labelAnimation-enter-active {
+  opacity: 1;
+  width: 150px;
+  transition: opacity 150ms ease-in, width 200ms ease-in;
+}
+
+.labelAnimation-leave {
+  opacity: 1;
+}
+
+.labelAnimation-leave.labelAnimation-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }

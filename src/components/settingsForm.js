@@ -2,13 +2,28 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import "../css/settingsForm.scss"
+import Settings from "../data/settings"
 
 class SettingsForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      vosotrosChecked: false
     }
+  }
+  handleCheckBoxChange(e){
+    console.log("checkbox change: ", e.target.id)
+  }
+  renderCheckBoxes() {
+    Object.entries(Settings).forEach(([key, value]) => {
+      console.log(key, value)
+      return(
+        <div className="box">
+               <input id="key" type="checkbox" checked="value" onChange = { this.handleCheckBoxChange }/>
+               <label htmlFor="checkBoxVosotros" className="chkbox">Vosotros</label>
+        </div>
+      )
+    });
   }
   render() {
     return (
@@ -17,32 +32,7 @@ class SettingsForm extends React.Component {
           <div className="container">
             <div className="row">
                 <div className="col">
-                  <div className="box">
-                         <input id="checkBox1" type="checkbox"/>
-                         <label htmlFor="checkBoxVosotros" className="chkbox">Vosotros</label>
-                  </div>
-                  <div className="box">
-                         <input id="checkBox2" type="checkbox"/>
-                         <label htmlFor="checkBoxSubjuntivo" className="chkbox">Subjuntivo</label>
-                  </div>
-                  <div className="box">
-                         <input id="checkBox2" type="checkbox"/>
-                         <label htmlFor="checkbox1" className="chkbox">Imperativo</label>
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="box">
-                         <input id="checkBox1" type="checkbox"/>
-                         <label htmlFor="checkbox1" className="chkbox">Perfecto</label>
-                  </div>
-                  <div className="box">
-                         <input id="checkBox1" type="checkbox"/>
-                         <label htmlFor="checkbox1" className="chkbox">Imperfecto</label>
-                  </div>
-                  <div className="box">
-                         <input id="checkBox1" type="checkbox"/>
-                         <label htmlFor="checkbox1" className="chkbox">Advanced</label>
-                  </div>
+                  { this.renderCheckBoxes() }
                 </div>
               </div>
             </div>

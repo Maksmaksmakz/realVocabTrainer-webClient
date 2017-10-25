@@ -15,8 +15,7 @@ class VerbChecker extends React.Component {
     this.state = {
       correctVerb: props.verb,
       submission: '',
-      showGoodIcon: false,
-      showBadIcon: false,
+      iconToShow: ''
     }
     console.log(this.state.correctVerb)
   }
@@ -25,17 +24,24 @@ class VerbChecker extends React.Component {
       <div className="verbChecker">
       <img className="poopIcon" src= { poopIcon }></img>
         <TransitionGroup
-          transitionName="example"
+          transitionName="poopIcon"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
         { this.renderValidationIcon() }
         </TransitionGroup>
         <form className="verbForm" onSubmit = { this.checkAnswer.bind(this) } autoComplete="off">
-          <label className ="verbCheckerLabel">
-            <input type="text"
-            value = { this.state.submission }
-            onChange= { this.handleChange.bind(this) }/>
-          </label>
+          <TransitionGroup
+          transitionName="labelAnimation"
+          appear={ "true" }
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+            <label className ="verbCheckerLabel">
+              <input type="text"
+              value = { this.state.submission }
+              onChange= { this.handleChange.bind(this) }/>
+            </label>
+          </TransitionGroup>
+
           <input className="inputButton" type="submit" value= "Submit"/>
         </form>
       </div>
@@ -44,36 +50,44 @@ class VerbChecker extends React.Component {
   checkAnswer(e) {
     e.preventDefault()
     console.log("Submission: ", this.state.submission, "solution: ", this.props.verb)
+    let callBack = null
     if(this.props.verb == this.state.submission){
-      //this.props.onCorrect()
-      this.setState( { showGoodIcon: true })
-      this.setState( { showBadIcon: false })
+      this.setState( { iconToShow: 'good' })
+      callBack = this.props.onCorrect
     }
     else{
-      //this.props.onFalse()
-      this.setState( { showBadIcon: true })
-      this.setState( { showGoodIcon: false })
+      this.setState( { iconToShow: 'bad' })
+      callBack = this.props.onFalse
+      console.log(this.props.onFalse)
     }
+    setTimeout(this.clearIcons.bind(this, callBack), 800)
     this.setState({ submission: '' })
   }
   handleChange(e) {
     e.preventDefault()
     this.setState({
-      submission: e.target.value
+      submission: e.target.value,
+      iconToShow: ''
     })
-    console.log("handleChange")
   }
   renderValidationIcon(){
-    console.log(this.state.showGoodIcon)
-    if(this.state.showGoodIcon){
+    if(this.state.iconToShow === "good"){
       return (
         <img className="validationIconGood" src= { goodIcon }></img>
       )
-    }else if(this.state.showBadIcon){
+    }else if(this.state.iconToShow === "bad"){
       return (
         <img className="validationIconBad" src= { badIcon }></img>
       )
     }
+    else {
+      return null
+    }
+  }
+  clearIcons(callBack){
+    console.log(callBack)
+    callBack()
+    this.setState({ iconToShow: '' })
   }
 }
 

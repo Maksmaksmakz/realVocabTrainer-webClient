@@ -99,8 +99,19 @@ export function mapAccessorToPerson(index){
       return "tu"
       break
     case "form_3s":
-      return "el"
-      break
+      const ranThree =  Math.floor(Math.random() * 3)
+      if(ranThree === 0) {
+        return "el"
+        break
+      }
+      if(ranThree === 1) {
+        return "ella"
+        break
+      }
+      if(ranThree === 2) {
+        return "usted"
+        break
+      }
     case "form_1p":
       return "nosotros"
       break
@@ -108,7 +119,18 @@ export function mapAccessorToPerson(index){
       return "vosotros"
       break
     case "form_3p":
-      return "ellos"
-      break
+      const ranTwo =  Math.floor(Math.random() * 3)
+      if(ranTwo === 0) {
+        return "ellos"
+        break
+      }
+      if(ranTwo === 1) {
+        return "ellas"
+        break
+      }
+      if(ranTwo === 2) {
+        return "ustedes"
+        break
+      }
     }
 }
