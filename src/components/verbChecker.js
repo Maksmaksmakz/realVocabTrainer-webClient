@@ -22,13 +22,6 @@ class VerbChecker extends React.Component {
   render() {
     return (
       <div className="verbChecker">
-      <img className="poopIcon" src= { poopIcon }></img>
-        <TransitionGroup
-          transitionName="poopIcon"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-        { this.renderValidationIcon() }
-        </TransitionGroup>
         <form className="verbForm" onSubmit = { this.checkAnswer.bind(this) } autoComplete="off">
           <TransitionGroup
           transitionName="labelAnimation"
@@ -36,14 +29,20 @@ class VerbChecker extends React.Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
             <label className ="verbCheckerLabel">
-              <input type="text"
+              <input type="text" size="15"
               value = { this.state.submission }
               onChange= { this.handleChange.bind(this) }/>
             </label>
           </TransitionGroup>
-
           <input className="inputButton" type="submit" value= "Submit"/>
         </form>
+        <img className="poopIcon" src= { poopIcon }></img>
+        <TransitionGroup
+          transitionName="poopIcon"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+        { this.renderValidationIcon() }
+        </TransitionGroup>
       </div>
     )
   }

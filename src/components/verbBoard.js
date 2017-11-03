@@ -19,7 +19,7 @@ function VerbBoard (props){
   const personAccessor = getRandomAccessor()
 
   return (
-    <div>
+    <div className = "verbBoard">
       <div className="verbInfo">
         <h5>VERB BOARD</h5>
         <h5>Verbo: { entry.infinitive }</h5>

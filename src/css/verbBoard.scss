@@ -2,9 +2,16 @@ body {
   background-color: green;
   text-align: center;
   font-color: #565656;
+  width:100%;
+}
+
+.verbBoard {
+  width: 400px;
+  margin: 0 auto;
 }
 
 .verbInfo{
-  width: 100%;
+  width: 200px;
   margin: 0 auto;
+  padding-top: 10px;
 }

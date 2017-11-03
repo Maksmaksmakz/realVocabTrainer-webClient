@@ -1,4 +1,5 @@
 $goodIconPosition: 200px ;
+$poopIconWidth: 200px;
 
 .verbChecker {
   width: 100%;
@@ -6,11 +7,13 @@ $goodIconPosition: 200px ;
 }
 .verbForm{
   display:inline-block;
-  width: 100%;
+  width: 90%;
   max-width: 444px;
   margin: 0 auto ;
   text-align:center;
   font-size: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .inputButton {
   background-color: #4CAF50; /* Green */
@@ -23,12 +26,9 @@ $goodIconPosition: 200px ;
   font-size: 16px;
 }
 .poopIcon {
-  display:block;
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  margin:auto;
+  display:inline-block;
+  width: $poopIconWidth;
+  vertical-align: middle;
   z-index: 1000;
 }
 .validationIconGood{
