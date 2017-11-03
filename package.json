@@ -7,7 +7,7 @@
     "build": "webpack",
     "build:prod": "webpack -p",
     "watch": "webpack-dev-server",
-    "start": "NODE_ENV=production node ./dist/bundle.js"
+    "start": "NODE_ENV=production http-server ./dist $PORT -c 0",
   },
   "author": "Maks",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
+    "http-server": "^0.10.0",
     "mo-js": "^0.288.2",
     "mysql": "^2.15.0",
     "pg": "^7.3.0",
